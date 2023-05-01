@@ -1,16 +1,13 @@
 const axios = require("axios");
 
-exports.trafficParser = function (apikey, host) {
+exports.trafficParser = function (apikey) {
   return function (req, res, next) {
     axios
-      .post(
-        `http://localhost:4000/api/users/${apikey}/servers/${host}/traffics`,
-        {
-          type: "traffic",
-          path: req.url,
-          host: req.headers.host,
-        }
-      )
+      .post(`http://localhost:4000/api/servers/${apikey}/traffics`, {
+        type: "traffic",
+        path: req.url,
+        host: req.headers.host,
+      })
       .then((response) => {
         console.log(response.data);
       })
@@ -22,21 +19,18 @@ exports.trafficParser = function (apikey, host) {
   };
 };
 
-exports.errorParser = function (apikey, host) {
+exports.errorParser = function (apikey) {
   return function (err, req, res, next) {
     axios
-      .post(
-        `http://localhost:4000/api/users/${apikey}/servers/${host}/errors`,
-        {
-          type: "error",
-          errorName: err.name,
-          errorMessage: err.message,
-          errorStack: err.stack,
-          path: req.url,
-          method: req.method,
-          host: req.headers.host,
-        }
-      )
+      .post(`http://localhost:4000/api/servers/${apikey}/errors`, {
+        type: "error",
+        errorName: err.name,
+        errorMessage: err.message,
+        errorStack: err.stack,
+        path: req.url,
+        method: req.method,
+        host: req.headers.host,
+      })
       .then((response) => {
         console.log(response.data);
       })
