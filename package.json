@@ -1,13 +1,15 @@
 {
   "name": "spycat-tracker",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "gunhwalee's personal library",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "personal-library", "server-traffic", "error-tracking"
+    "personal-library",
+    "server-traffic",
+    "error-tracking"
   ],
   "author": {
     "name": "gunhwalee",
