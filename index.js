@@ -3,7 +3,7 @@ const axios = require("axios");
 exports.trafficParser = function (apikey) {
   return function (req, res, next) {
     axios
-      .post(`http://localhost:4000/api/servers/${apikey}/traffics`, {
+      .post(`https://eb-spycat.co.kr/api/servers/${apikey}/traffics`, {
         type: "traffic",
         path: req.url,
         host: req.headers.host,
@@ -22,7 +22,7 @@ exports.trafficParser = function (apikey) {
 exports.errorParser = function (apikey) {
   return function (err, req, res, next) {
     axios
-      .post(`http://localhost:4000/api/servers/${apikey}/errors`, {
+      .post(`https://eb-spycat.co.kr/api/servers/${apikey}/errors`, {
         type: "error",
         errorName: err.name,
         errorMessage: err.message,
