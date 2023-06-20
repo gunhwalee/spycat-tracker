@@ -16,9 +16,9 @@
     "email": "ghlee2588@gmail.com"
   },
   "repository": {
-    "url": "https://github.com/spy-cat-0/spycat-tracker"
+    "url": "https://github.com/gunhwalee/spycat-tracker"
   },
-  "homepage": "https://github.com/spy-cat-0/spycat-tracker",
+  "homepage": "https://github.com/gunhwalee/spycat-tracker",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.3.5"
