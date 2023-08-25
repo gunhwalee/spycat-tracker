@@ -1,6 +1,6 @@
 {
   "name": "spycat-tracker",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "gunhwalee's personal library",
   "main": "index.js",
   "scripts": {
